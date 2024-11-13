@@ -50,6 +50,17 @@ public:
         cout << "nullptr" << endl;
     }
 
+    bool search(int key) const {
+        Node* temp = head;
+        while (temp != nullptr) {
+            if (temp->data == key) {
+                return true; 
+            }
+            temp = temp->next;
+        }
+        return false; 
+    }
+
 };
 
 int main() {
